@@ -94,14 +94,35 @@ body {
 
 /* ─── Promo Video ─── */
 .promo-video-section { padding: 48px 0 0; background: var(--bg); }
+.promo-video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
 .promo-video {
     display: block;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
+.mute-btn {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+.mute-btn:hover { background: rgba(0,0,0,0.8); }
 
 /* ─── Products Section ─── */
 .products { padding: 72px 0 96px; }
