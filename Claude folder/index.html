@@ -34,9 +34,12 @@
     <!-- Promo Video -->
     <section class="promo-video-section">
         <div class="container">
-            <video class="promo-video" autoplay muted loop playsinline>
-                <source src="promo.mp4" type="video/mp4">
-            </video>
+            <div class="promo-video-wrap">
+                <video class="promo-video" id="promo-video" autoplay muted loop playsinline>
+                    <source src="promo.mp4" type="video/mp4">
+                </video>
+                <button class="mute-btn" id="mute-btn" aria-label="Unmute video">🔇 Tap to unmute</button>
+            </div>
         </div>
     </section>
 
@@ -119,6 +122,18 @@
             <p>© 2025 SmartHome Picks · All rights reserved</p>
         </div>
     </footer>
+
+<script>
+// Mute/unmute toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('promo-video');
+    const btn   = document.getElementById('mute-btn');
+    btn.addEventListener('click', () => {
+        video.muted = !video.muted;
+        btn.textContent = video.muted ? '🔇 Tap to unmute' : '🔊 Mute';
+    });
+});
+</script>
 
 <script>
 // ═══════════════════════════════════════════════
