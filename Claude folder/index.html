@@ -221,16 +221,11 @@ function buildCard(p, idx) {
         p.bestSeller ? `<span class="badge badge-bestseller">🏆 Best Seller</span>` : '',
         p.popular    ? `<span class="badge badge-popular">🔥 Popular This Week</span>` : '',
     ].join('');
-    const videoHTML   = p.video
-        ? `<div class="video-wrap"><iframe src="${p.video}" frameborder="0" allowfullscreen loading="lazy"></iframe></div>`
-        : `<div class="video-placeholder"><span class="play-icon">▶</span><span>Video coming soon</span></div>`;
-
     return `
     <div class="product-card" data-tag="${p.tag}" data-index="${idx}">
         <div class="product-image">
             <img src="${p.image}" alt="${p.name}" loading="lazy">
         </div>
-        ${videoHTML}
         <div class="product-info">
             ${badgesHTML ? `<div class="badges-row">${badgesHTML}</div>` : ''}
             <div class="product-tag">${p.tag}</div>
