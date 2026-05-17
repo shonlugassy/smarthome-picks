@@ -206,23 +206,6 @@ body {
 }
 .product-card:hover .product-image img { transform: scale(1.05); }
 
-/* ─── Video ─── */
-.video-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    height: 120px;
-    background: #1a1a2e;
-    color: rgba(255,255,255,0.5);
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-}
-.play-icon { font-size: 1.8rem; opacity: 0.4; }
-.video-wrap { height: 180px; }
-.video-wrap iframe { width: 100%; height: 100%; }
 
 /* ─── Badges ─── */
 .badges-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
